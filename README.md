@@ -25,3 +25,16 @@ This project is useful when you need to serve many HTTPS domains on one public I
 
 1. Prepare a CSV file named `domains.csv` in the same directory with content like:
 
+```
+domain1.com,10.2.0.1:443
+domain2.net,27.60.70.20:443
+```
+
+Lines starting with `#` are considered comments and ignored.
+
+2. Place the `HAProxy-SNI-Forwarder.sh` bash script (provided) in the same directory.
+
+3. Run the script to generate the HAProxy configuration:
+
+```bash
+bash HAProxy-SNI-Forwarder.sh
